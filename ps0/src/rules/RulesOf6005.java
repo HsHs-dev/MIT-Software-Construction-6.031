@@ -3,6 +3,8 @@
  */
 package rules;
 
+import java.nio.channels.WritableByteChannel;
+
 /**
  * RulesOf6005 represents the collaboration policy of 6.005 as described by the
  * general information on Stellar.
@@ -35,10 +37,9 @@ public class RulesOf6005 {
     public static boolean mayUseCodeInAssignment(boolean writtenByYourself,
             boolean availableToOthers, boolean writtenAsCourseWork,
             boolean citingYourSource, boolean implementationRequired) {
-        
-        // TODO: Fill in this method, then remove the exception
-        
-        throw new RuntimeException("implement me!");
+
+            return writtenByYourself && (availableToOthers || writtenAsCourseWork || 
+            citingYourSource || implementationRequired);
     }
     
     /**

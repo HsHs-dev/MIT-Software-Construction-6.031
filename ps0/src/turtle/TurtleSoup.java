@@ -12,7 +12,8 @@ public class TurtleSoup {
      * Draw a square.
      * You may not modify those values:
      * Turning degree is 90.
-     * Number of stesp is 4
+     * Number of steps the number square sides (4)
+     * 
      * @param turtle the turtle context
      * @param sideLength length of each side
      */
@@ -38,11 +39,14 @@ public class TurtleSoup {
      * There is a simple formula for calculating the inside angles of a polygon;
      * you should derive it and use it here.
      * 
+     * 180.0 is the degree of a straight line
+     * 
      * @param sides number of sides, where sides must be > 2
      * @return angle in degrees, where 0 <= angle < 360
      */
     public static double calculateRegularPolygonAngle(int sides) {
-        throw new RuntimeException("implement me!");
+        final double lineDegree = 180.0;
+        return lineDegree * (sides - 2) / sides;
     }
 
     /**
@@ -52,11 +56,14 @@ public class TurtleSoup {
      * Make sure you *properly round* the answer before you return it (see java.lang.Math).
      * HINT: it is easier if you think about the exterior angles.
      * 
+     * sum is the total sum of exterior angles of any polygon
+     * 
      * @param angle size of interior angles in degrees, where 0 < angle < 180
      * @return the integer number of sides
      */
     public static int calculatePolygonSidesFromAngle(double angle) {
-        throw new RuntimeException("implement me!");
+        final int sum = 360;
+        return (int)Math.ceil(sum / (180 - angle));
     }
 
     /**
@@ -64,12 +71,20 @@ public class TurtleSoup {
      * 
      * (0,0) is the lower-left corner of the polygon; use only right-hand turns to draw.
      * 
+     * turning should be by exterior angle, which is 180 - interior angle
+     * 
      * @param turtle the turtle context
      * @param sides number of sides of the polygon to draw
      * @param sideLength length of each side
      */
     public static void drawRegularPolygon(Turtle turtle, int sides, int sideLength) {
-        throw new RuntimeException("implement me!");
+        final int exterior = 180;
+        int steps = sides;
+        while (steps != 0) {
+            turtle.forward(sideLength);
+            turtle.turn(exterior - calculateRegularPolygonAngle(sides));
+            steps--;
+        }
     }
 
     /**
@@ -93,7 +108,17 @@ public class TurtleSoup {
      */
     public static double calculateHeadingToPoint(double currentHeading, int currentX, int currentY,
                                                  int targetX, int targetY) {
-        throw new RuntimeException("implement me!");
+
+            final int fullCirc = 360;
+
+            final int deltaX = targetX - currentX;
+            final int deltaY = targetY - currentY;
+            
+            final double atan2 = Math.toDegrees(Math.atan2(deltaX, deltaY));
+
+            final double head2point = (atan2 - currentHeading + fullCirc) % fullCirc;
+
+            return head2point;
     }
 
     /**
@@ -111,7 +136,19 @@ public class TurtleSoup {
      *         otherwise of size (# of points) - 1
      */
     public static List<Double> calculateHeadings(List<Integer> xCoords, List<Integer> yCoords) {
-        throw new RuntimeException("implement me!");
+        List<Double> list = new ArrayList<>();
+        double currentHeading = 0;
+        for (int i = 0; i < (xCoords.size() - 1); i++) {
+            
+            list.add(calculateHeadingToPoint(currentHeading, xCoords.get(i), yCoords.get(i), 
+            xCoords.get(i+1), yCoords.get(i+1)));
+
+            // adjusting the new heading (with each move the turtle change its heading)
+            currentHeading = (currentHeading + list.get(i) + 360) % 360;
+
+        }
+
+        return list;
     }
 
     /**
@@ -123,7 +160,7 @@ public class TurtleSoup {
      * @param turtle the turtle context
      */
     public static void drawPersonalArt(Turtle turtle) {
-        throw new RuntimeException("implement me!");
+        // TODO: Implement this.
     }
 
     /**
@@ -136,7 +173,11 @@ public class TurtleSoup {
     public static void main(String args[]) {
         DrawableTurtle turtle = new DrawableTurtle();
 
-        drawSquare(turtle, 40);
+        // drawSquare(turtle, 40);
+
+        // drawRegularPolygon(turtle, 5, 100);
+        
+        drawPersonalArt(turtle);
 
         // draw the window
         turtle.draw();
