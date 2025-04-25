@@ -160,7 +160,20 @@ public class TurtleSoup {
      * @param turtle the turtle context
      */
     public static void drawPersonalArt(Turtle turtle) {
-        // TODO: Implement this.
+
+        int steps = 6;
+        while (steps != 0) {
+            for (PenColor color: PenColor.values()) {
+                turtle.color(color);
+                drawRegularPolygon(turtle, 6, 100);
+                turtle.turn(5);
+
+            }
+            turtle.turn(10);
+
+            steps--;
+        }
+
     }
 
     /**
