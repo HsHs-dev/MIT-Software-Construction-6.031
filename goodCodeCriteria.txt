@@ -1,0 +1,43 @@
+What to look for
+
+Although you can make comments about anything you think is relevant, the primary goal of this class is to learn how to write code that is safe from bugs, easy to understand, and ready for change. Read the code with those principles in mind. Here are some concrete examples of problems to look for:
+
+
+Bugs or potential bugs.
+Repetitive code (remember DRY, Don’t Repeat Yourself).
+Disagreement between code and specification.
+Off-by-one errors.
+Global variables, and other too-large variable scopes.
+Magic numbers.
+Code that could be written more defensively or to fail faster.
+…
+Unclear, messy code.
+
+Bad variable or method names.
+Inconsistent indentation.
+Convoluted control flow (if and while statements) that could be simplified.
+Packing too much into one line of code, or too much into one method.
+Failing to comment obscure code.
+Having too many trivial comments that are simply redundant with the code.
+Variables used for more than one purpose.
+…
+Misunderstandings of the programming language.
+
+Misuse of ==.
+Inadvertent use of integer division instead of floating-point division.
+…
+Misusing (or failing to use) essential design concepts we have previously discussed in class. (If you’re not sure what some of these concepts mean, you can look them up in Topics and Terms, and we may not have discussed them in class yet.)
+
+Incomplete or incorrect specification for a method or class.
+Representation exposure for a data abstraction
+Immutable datatypes that expose themselves to change.
+Invariants that aren’t really invariant, or aren’t even stated.
+Failure to implement equals and hashCode correctly.
+…
+Positive comments are also a good thing. Don’t be afraid to make comments about things you really like, for example:
+
+Unusually elegant code.
+Great name choices.
+Creative solutions.
+Great design.
+…

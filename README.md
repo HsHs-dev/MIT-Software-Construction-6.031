@@ -12,7 +12,7 @@ The focus of this course is on writing code that is:
 - [x] 01: Static Checking
 - [x] 02: Basic Java
 - [x] 03: Testing
-- [ ] 04: Code Review
+- [x] 04: Code Review
 - [ ] 05: Version Control
 - [ ] 06: Specifications
 - [ ] 07: Designing Specifications
