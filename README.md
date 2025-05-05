@@ -14,7 +14,7 @@ The focus of this course is on writing code that is:
 - [x] 03: Testing
 - [x] 04: Code Review
 - [x] 05: Version Control
-- [ ] 06: Specifications
+- [x] 06: Specifications
 - [ ] 07: Designing Specifications
 - [ ] 08: Mutability & Immutability
 - [ ] 09: Avoiding Debugging
