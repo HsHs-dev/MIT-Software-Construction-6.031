@@ -15,7 +15,7 @@ The focus of this course is on writing code that is:
 - [x] 04: Code Review
 - [x] 05: Version Control
 - [x] 06: Specifications
-- [ ] 07: Designing Specifications
+- [x] 07: Designing Specifications
 - [ ] 08: Mutability & Immutability
 - [ ] 09: Avoiding Debugging
 - [ ] 10: Abstract Data Types
