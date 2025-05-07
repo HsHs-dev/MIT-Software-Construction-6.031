@@ -47,3 +47,12 @@ The focus of this course is on writing code that is:
 - [ ] 2: Multi-Startup Set
 - [ ] 3: Memely
 - [ ] 4: Memory Scramble
+
+## Poject
+
+- [ ] Star Battle
+
+## Quizzes
+
+- [ ] Quiz 1
+- [ ] Quiz 2
