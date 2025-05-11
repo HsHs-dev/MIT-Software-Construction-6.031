@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet href="../../../web/svg-snapshot-diagram.css" type="text/css"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="112.17188"
+   height="128.44415"
+   preserveAspectRatio="xMinYMin meet"
+   version="1.1"
+   id="svg260"
+   sodipodi:docname="mutation.svg"
+   inkscape:version="1.1-dev (f9311a1, 2019-12-25)">
+  <style
+     id="style224">
+        /* this is a minimal stylesheet that makes the SVG file editable in InkScape;
+           for the full stylesheet, make sure this file contains
+           <?xml-stylesheet href="../../../web/svg-snapshot-diagram.css" type="text/css"?>
+           as the second line
+           (warning: InkScape deletes it!)
+        */
+
+        rect {
+            stroke: black;
+            fill: none;
+        }
+
+        path.arrow {
+            stroke: black;
+            fill: none;
+            marker-end: url(#arrowhead);
+        }
+
+        #arrowhead {
+            stroke: black;
+            fill: none;
+            filter: none;
+        }
+
+        text {
+            font-family: sans-serif;
+            font-size: 12pt;
+            text-anchor: middle;
+            dominant-baseline: middle;
+        }
+
+        text.type, text.function {
+            font-size: 80%;
+        }
+
+  </style>
+  <metadata
+     id="metadata264">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     fit-margin-bottom="10"
+     fit-margin-right="10"
+     fit-margin-top="10"
+     fit-margin-left="10"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     inkscape:document-rotation="0"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1790"
+     inkscape:window-height="1011"
+     id="namedview262"
+     showgrid="false"
+     inkscape:zoom="3.3869098"
+     inkscape:cx="27.118765"
+     inkscape:cy="50.944145"
+     inkscape:window-x="0"
+     inkscape:window-y="23"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg260" />
+  <defs
+     id="defs222">
+    <marker
+       id="arrowhead"
+       markerWidth="10"
+       markerHeight="8"
+       refX="8"
+       refY="4"
+       orient="auto">
+      <path
+         inkscape:connector-curvature="0"
+         d="M 0,8 8,4 0,0"
+         id="path214" />
+    </marker>
+    <filter
+       id="double">
+      <feMorphology
+         in="SourceGraphic"
+         result="Dilated"
+         operator="dilate"
+         radius="1"
+         id="feMorphology217" />
+      <feComposite
+         in="SourceGraphic"
+         in2="Dilated"
+         result="Out"
+         operator="xor"
+         id="feComposite219" />
+    </filter>
+    <marker
+       id="arrowhead-5"
+       markerWidth="10"
+       markerHeight="8"
+       refX="8"
+       refY="4"
+       orient="auto">
+      <path
+         inkscape:connector-curvature="0"
+         d="M 0,8 8,4 0,0"
+         id="path214-9" />
+    </marker>
+  </defs>
+  <g
+     transform="translate(10.5,69.944145)"
+     class="object mutable"
+     id="g234">
+    <text
+       class="type"
+       x="45.585938"
+       y="12"
+       id="text226">StringBuilder</text>
+    <rect
+       y="0"
+       x="0"
+       width="91.171875"
+       height="48"
+       rx="20"
+       id="rect228" />
+    <text
+       class="string"
+       x="23.146603"
+       y="29.704746"
+       id="text232">&quot;a&quot;</text>
+    <text
+       id="text232-8"
+       y="30.530779"
+       x="65.675636"
+       class="string">&quot;ab&quot;</text>
+  </g>
+  <g
+     transform="translate(34.085937,-34.055855)"
+     id="g258">
+    <text
+       class="label"
+       x="-13.135273"
+       y="51.848824"
+       id="text246">sb</text>
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       class="arrow _"
+       d="M 1.1228631,51.851029 C 19.742446,59.776009 39.564019,68.405013 33.921066,102.73015"
+       id="path256" />
+  </g>
+  <g
+     transform="matrix(0.58422104,0,0,0.53167324,0.60627518,61.372579)"
+     class="crossout"
+     id="g120">
+    <path
+       d="m 32.477983,62.298677 c 29.525439,17.42001 47.240703,20.667808 47.240703,20.667808"
+       id="path706"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path708"
+       d="M 34.614392,86.372851 C 66.206612,72.495896 80.083569,58.914193 80.083569,58.914193"
+       sodipodi:nodetypes="cc" />
+  </g>
+</svg>

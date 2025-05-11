@@ -97,7 +97,7 @@ String s = "a";
 s = s + "b";
 ```
 
-![alt text](reassignment-of-immutable.svg)
+![alt text](images/reassignment-of-immutable.svg)
 
 Here when you assign a new value for the String `s` you actually reassign a different reference (the reference to `a` is no longer accessable)
 
@@ -108,7 +108,7 @@ StringBuilder sb = new StringBuilder("a");
 sb.append("b");
 ```
 
-![alt text](mutation.svg)
+![alt text](images/mutation.svg)
 
 - If you want to make a variabel *unreassignable* use the `final` keyword
 
@@ -215,11 +215,11 @@ actually don't declare your own pi, use `Math.PI`, but just don't throw *magic n
   * a requires clause, describing additional restrictions on the parameters
   * an effects clause, describing the return value, exceptions, and other effects of the method
 
-![The contract acts as a firewall between client and implementer.](contract.png)
+![The contract acts as a firewall between client and implementer.](images/contract.png)
 
 Taken together, the form the *precondition* and *postcondition* of the method
 
-![alt text](conditions.png)
+![alt text](images/conditions.png)
 
 - Java specification:
 
@@ -242,7 +242,7 @@ returns index i such that arr[i] = val
 static int find(int[] arr, int val)
 ```
 
-![What a specification may talk about](spec.png)
+![What a specification may talk about](images/spec.png)
 
 - `null` is not good
 

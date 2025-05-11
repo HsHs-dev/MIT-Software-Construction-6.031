@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet href="../../../web/svg-snapshot-diagram.css" type="text/css"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.1-dev (f9311a1, 2019-12-25)"
+   sodipodi:docname="reassignment-of-immutable.svg"
+   id="svg260"
+   version="1.1"
+   preserveAspectRatio="xMinYMin meet"
+   height="147.07422"
+   width="224.23438">
+  <style
+     id="style224">
+        /* this is a minimal stylesheet that makes the SVG file editable in InkScape;
+           for the full stylesheet, make sure this file contains
+           <?xml-stylesheet href="../../../web/svg-snapshot-diagram.css" type="text/css"?>
+           as the second line
+           (warning: InkScape deletes it!)
+        */
+
+        rect {
+            stroke: black;
+            fill: none;
+        }
+
+        path.arrow {
+            stroke: black;
+            fill: none;
+            marker-end: url(#arrowhead);
+        }
+
+        #arrowhead {
+            stroke: black;
+            fill: none;
+            filter: none;
+        }
+
+        text {
+            font-family: sans-serif;
+            font-size: 12pt;
+            text-anchor: middle;
+            dominant-baseline: middle;
+        }
+
+        text.type, text.function {
+            font-size: 80%;
+        }
+
+  </style>
+  <metadata
+     id="metadata264">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     inkscape:current-layer="svg260"
+     inkscape:window-maximized="0"
+     inkscape:window-y="23"
+     inkscape:window-x="5"
+     inkscape:cy="67.096608"
+     inkscape:cx="193.89283"
+     inkscape:zoom="3.5352471"
+     showgrid="false"
+     id="namedview262"
+     inkscape:window-height="1011"
+     inkscape:window-width="1705"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     inkscape:document-rotation="0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     fit-margin-top="10"
+     fit-margin-right="10"
+     fit-margin-bottom="10"
+     fit-margin-left="10" />
+  <defs
+     id="defs222">
+    <marker
+       orient="auto"
+       refY="4"
+       refX="8"
+       markerHeight="8"
+       markerWidth="10"
+       id="arrowhead">
+      <path
+         id="path214"
+         d="M 0,8 8,4 0,0"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <filter
+       id="double">
+      <feMorphology
+         id="feMorphology217"
+         radius="1"
+         operator="dilate"
+         result="Dilated"
+         in="SourceGraphic" />
+      <feComposite
+         id="feComposite219"
+         operator="xor"
+         result="Out"
+         in2="Dilated"
+         in="SourceGraphic" />
+    </filter>
+    <marker
+       orient="auto"
+       refY="4"
+       refX="8"
+       markerHeight="8"
+       markerWidth="10"
+       id="arrowhead-6">
+      <path
+         inkscape:connector-curvature="0"
+         id="path214-9"
+         d="M 0,8 8,4 0,0" />
+    </marker>
+    <marker
+       id="arrowhead-6-0"
+       markerWidth="10"
+       markerHeight="8"
+       refX="8"
+       refY="4"
+       orient="auto">
+      <path
+         d="M 0,8 8,4 0,0"
+         id="path214-9-8"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       id="arrowhead-6-6"
+       markerWidth="10"
+       markerHeight="8"
+       refX="8"
+       refY="4"
+       orient="auto">
+      <path
+         d="M 0,8 8,4 0,0"
+         id="path214-9-83"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       id="arrowhead-6-5"
+       markerWidth="10"
+       markerHeight="8"
+       refX="8"
+       refY="4"
+       orient="auto">
+      <path
+         d="M 0,8 8,4 0,0"
+         id="path214-9-3"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       orient="auto"
+       refY="4"
+       refX="8"
+       markerHeight="8"
+       markerWidth="10"
+       id="arrowhead-6-5-5">
+      <path
+         inkscape:connector-curvature="0"
+         id="path214-9-3-7"
+         d="M 0,8 8,4 0,0" />
+    </marker>
+    <marker
+       orient="auto"
+       refY="4"
+       refX="8"
+       markerHeight="8"
+       markerWidth="10"
+       id="arrowhead-6-5-4">
+      <path
+         inkscape:connector-curvature="0"
+         id="path214-9-3-1"
+         d="M 0,8 8,4 0,0" />
+    </marker>
+    <marker
+       id="arrowhead-6-5-5-3"
+       markerWidth="10"
+       markerHeight="8"
+       refX="8"
+       refY="4"
+       orient="auto">
+      <path
+         d="M 0,8 8,4 0,0"
+         id="path214-9-3-7-9"
+         inkscape:connector-curvature="0" />
+    </marker>
+  </defs>
+  <g
+     transform="translate(10.5,88.574219)"
+     class="object immutable"
+     id="g234">
+    <text
+       class="type"
+       x="45.585938"
+       y="12"
+       id="text226">String</text>
+    <rect
+       y="0"
+       x="0"
+       width="91.171875"
+       height="48"
+       rx="20"
+       id="rect228" />
+    <text
+       class="string"
+       x="45.585938"
+       y="30"
+       id="text232">&quot;a&quot;</text>
+  </g>
+  <g
+     transform="translate(121.67188,88.574219)"
+     class="object immutable"
+     id="g244">
+    <text
+       class="type"
+       x="46.03125"
+       y="12"
+       id="text236">String</text>
+    <rect
+       y="0"
+       x="0"
+       width="92.0625"
+       height="48"
+       rx="20"
+       id="rect238" />
+    <text
+       class="string"
+       x="46.03125"
+       y="30"
+       id="text242">&quot;ab&quot;</text>
+  </g>
+  <g
+     transform="translate(34.085937,-15.425781)"
+     id="g258">
+    <text
+       class="label"
+       x="22"
+       y="30"
+       id="text246">s</text>
+    <path
+       inkscape:connector-curvature="0"
+       class="arrow mutable _"
+       d="m 22,36 v 67.87031"
+       id="path252" />
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       class="arrow mutable _"
+       d="m 29.957928,34.094912 c 53.345715,7.19527 82.174702,17.228027 103.659262,69.775398"
+       id="path256" />
+  </g>
+  <g
+     transform="translate(-1.5,-15.425781)"
+     class="crossout"
+     id="g120">
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path706"
+       d="m 32.477983,62.298677 c 29.525439,17.42001 47.240703,20.667808 47.240703,20.667808" />
+    <path
+       sodipodi:nodetypes="cc"
+       d="M 34.614392,86.372851 C 66.206612,72.495896 80.083569,58.914193 80.083569,58.914193"
+       id="path708"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>
