@@ -7,6 +7,10 @@ The focus of this course is on writing code that is:
 2. Easy to understand
 3. Ready for change
 
+## Notes
+
+I have made good, compacted notes of each reading, breaking some concepts in my own words and summarizing some points. You can find the notes here.
+
 ## Readings
 
 - [x] 01: Static Checking
