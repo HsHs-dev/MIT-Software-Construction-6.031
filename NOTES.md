@@ -206,7 +206,13 @@ actually don't declare your own pi, use `Math.PI`, but just don't throw *magic n
 
 ## Version Control
 
-<!-- TODO -->
+The [Version Control reading](https://web.mit.edu/6.031/www/sp21/classes/05-version-control/) is really well written about version control.
+
+For extra reading and practicing:
+  * [Pro Git book](https://git-scm.com/book/en/v2) is your `git` reference
+
+  * [Lab8: Version Control (git) and Backups](https://decal.ocf.berkeley.edu/#week-8-4012025) from UCB Sysadmin Decal course
+  * [Version Control (Git)](https://missing.csail.mit.edu/2020/version-control/) from MIT The Missing Semester of Your CS Education
 
 ## Specifications
 
