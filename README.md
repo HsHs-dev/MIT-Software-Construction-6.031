@@ -20,7 +20,7 @@ I have made good, compacted notes of each reading, breaking some concepts in my 
 - [x] 05: Version Control
 - [x] 06: Specifications
 - [x] 07: Designing Specifications
-- [ ] 08: Mutability & Immutability
+- [x] 08: Mutability & Immutability
 - [ ] 09: Avoiding Debugging
 - [ ] 10: Abstract Data Types
 - [ ] 11: Abstraction Functions & Rep Invariants

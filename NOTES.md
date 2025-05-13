@@ -17,6 +17,7 @@ Our goal is to write code that is:
 - [05: Version Control](#version-control)
 - [06: Specifications](#specifications)
 - [07: Designing Specifications](#designing-specifications)
+- [08: Mutability & Immutability](#mutability--immutability)
 
 ## Static Checking
 
@@ -283,3 +284,14 @@ We can make a specification stronger by weakining its precondition. Not fully un
 Implementer: I don't have to worry about certain use cases.
 
 Client: I can use this for a variety of my work.
+
+## Mutability & Immutability
+
+The class reading is pretty straight forward, aliasing is the problem, when two constructs in the program points to the same object and one of them modifies something without the other's knowing, this causes nasty problems.
+
+An elegant solution to the `remove()` problem that we encountered using the iterator, is that Java throws `Concurrent­Modification­Exception`, and this is done through an internal Java field called [modCount](https://docs.oracle.com/javase/8/docs/api/java/util/AbstractList.html#modCount) which keeps track of the state of an Iterator, if something that is modified through it, not using it's own `remove()` method.
+
+Appreciation to the Java language writers that writes a **fail-fast code!**
+
+This reading really emphasize the importance of this course, that writing code is indeed engineering.
+
