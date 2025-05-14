@@ -18,6 +18,7 @@ Our goal is to write code that is:
 - [06: Specifications](#specifications)
 - [07: Designing Specifications](#designing-specifications)
 - [08: Mutability & Immutability](#mutability--immutability)
+- [09: Avoiding Debugging](#avoiding-debugging)
 
 ## Static Checking
 
@@ -294,4 +295,20 @@ An elegant solution to the `remove()` problem that we encountered using the iter
 Appreciation to the Java language writers that writes a **fail-fast code!**
 
 This reading really emphasize the importance of this course, that writing code is indeed engineering.
+
+## Avoiding Debugging
+
+- The best way to deal with debugging is avoiding debugging at all, by writing you code in a way that is *bug safe*
+
+- *Static checking* and *dynamic checking* helps to identify bugs in compile time and runtime respectively
+
+- As we saw in [Immutability](#mutability--immutability) `Strings` are great in passing information form one place in the program to the other without worrying about changing its value.
+
+- It's a good practice to use the `final` keyword for method parameters and as many local variables as possible.
+
+- The early you catch the bug, the better your code is *(fail faster)*
+
+- Another good practice to limit bugs, as we saw in [testing](#testing), is *incremental development*, build a little and test often
+
+- Limit the scope of your variables, so you narrow down the searching scope for the bug
 
