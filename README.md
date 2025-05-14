@@ -7,6 +7,10 @@ The focus of this course is on writing code that is:
 2. Easy to understand
 3. Ready for change
 
+## Course Process
+
+More on the course learning process, pros and cons about the course material, hardships and more can be found on my blog [CS2Day](https://hshs-dev.github.io/cs2day/)
+
 ## Notes
 
 I have made good, compacted notes of each reading, breaking some concepts in my own words and summarizing some points. You can find the notes [here](https://github.com/HsHs-dev/MIT-Software-Construction-6.031/blob/main/NOTES.md).
