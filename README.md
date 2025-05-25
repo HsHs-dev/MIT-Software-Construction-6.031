@@ -50,15 +50,17 @@ I have made good, compacted notes of each reading, breaking some concepts in my 
 
 ## Problem Sets
 
-- [x] 0: Turtle Graphics: [Download](https://ocw.mit.edu/ans7870/6/6.005/s16/psets/ps0/ps0.zip) project's files
-- [ ] 1: Flashcards
-- [ ] 2: Multi-Startup Set
-- [ ] 3: Memely
-- [ ] 4: Memory Scramble
+The Problem sets that are open sourced are related to 2016 iteration of the course, which can be found [here](https://ocw.mit.edu/courses/6-005-software-construction-spring-2016/pages/problem-sets/)
+
+- [x] 0: Turtle Graphics
+- [ ] 1: Tweet Tweet
+- [ ] 2: Poetic Walks
+- [ ] 3: Expressivo
+- [ ] 4: Multiplyer Minesweeper
 
 ## Poject
 
-- [ ] Star Battle
+- [ ] ABC Music Player
 
 ## Quizzes
 
