@@ -17,13 +17,20 @@ public class FilterTest {
      * TODO: your testing strategies for these methods should go here.
      * See the ic03-testing exercise for examples of what a testing strategy comment looks like.
      * Make sure you have partitions.
+     * 
+     * Testing strategy:
+     * 
+     * Partition for writtenBy(List<Tweet> tweets, String username) -> List<String>
+     * List<String>.size(): 0, 1, > 1
      */
     
     private static final Instant d1 = Instant.parse("2016-02-17T10:00:00Z");
     private static final Instant d2 = Instant.parse("2016-02-17T11:00:00Z");
+    private static final Instant d3 = Instant.parse("2016-02-17T11:00:00Z");
     
     private static final Tweet tweet1 = new Tweet(1, "alyssa", "is it reasonable to talk about rivest so much?", d1);
     private static final Tweet tweet2 = new Tweet(2, "bbitdiddle", "rivest talk in 30 minutes #hype", d2);
+    private static final Tweet tweet3 = new Tweet(3, "alyssa", "Hello from ps1!", d3);
     
     @Test(expected=AssertionError.class)
     public void testAssertionsEnabled() {
@@ -37,6 +44,24 @@ public class FilterTest {
         assertEquals("expected singleton list", 1, writtenBy.size());
         assertTrue("expected list to contain tweet", writtenBy.contains(tweet1));
     }
+
+    @Test
+    public void testWrittenByMultipleTweetsMultipleResults() {
+        List<Tweet> writtenBy = Filter.writtenBy(Arrays.asList(tweet1, tweet2, tweet3), "alyssa");
+
+        assertEquals("expected two tweets' list", 2, writtenBy.size());
+        assertTrue("expected list to contain tweet", writtenBy.contains(tweet1));
+        assertTrue("expected list to contain tweet", writtenBy.contains(tweet3));
+
+    }
+
+    @Test
+    public void testWrittenByMultipleTweetsNoResults() {
+        List<Tweet> writtenBy = Filter.writtenBy(Arrays.asList(tweet1, tweet2, tweet3), "Hassan");
+
+        assertEquals("expected No tweets", 0, writtenBy.size());
+    }
+
     
     @Test
     public void testInTimespanMultipleTweetsMultipleResults() {

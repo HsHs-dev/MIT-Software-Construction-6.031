@@ -72,7 +72,7 @@ public class Extract {
                 }
 
                 String name = text.substring(index + 1, endIndex);
-                names.add(name);
+                names.add(name.toLowerCase());
                 index = text.indexOf("@", endIndex);
             }
 
@@ -83,26 +83,3 @@ public class Extract {
     }
 
 }
-
-
-
-
-
-
-
-    //    for (Tweet tweet : tweets) {
-    //         String text = tweet.getText();
-    //         int index = text.indexOf('@');
-    //         while (index != -1) {
-    //             int endIndex = index + 1;
-    //             while (endIndex < text.length() && Character.isLetterOrDigit(text.charAt(endIndex))) {
-    //                 endIndex++;
-    //             }
-    //             String name = text.substring(index + 1, endIndex);
-    //             names.add(name.toLowerCase());
-    //             index = text.indexOf('@', endIndex);
-    //         }
-    //     }
-    //     return names;
-    // }
-
