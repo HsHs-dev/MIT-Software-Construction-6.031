@@ -21,7 +21,15 @@ public class FilterTest {
      * Testing strategy:
      * 
      * Partition for writtenBy(List<Tweet> tweets, String username) -> List<String>
-     * List<String>.size(): 0, 1, > 1
+     * returned List<String>.size(): 0, 1, > 1
+     * 
+     * Partition for inTimeSpan(List<Tweet> tweets, TimeSpan timespan) -> List<Tweet>
+     * List<Tweet> = 0 -> empty List
+     * List<Tweet> > 0 ->
+     *  timespan match all tweets -> List<Tweet>.size() == returnedList.size()
+     *  timespan match one tweet -> returnedList.size() == 1
+     *  timespan match > 1 -> returnedList.size() > 1
+     * 
      */
     
     private static final Instant d1 = Instant.parse("2016-02-17T10:00:00Z");
@@ -62,6 +70,27 @@ public class FilterTest {
         assertEquals("expected No tweets", 0, writtenBy.size());
     }
 
+    @Test
+    public void testInTimespanNoTweetsNoResults() {
+        Instant testStart = Instant.parse("2016-02-17T09:00:00Z");
+        Instant testEnd = Instant.parse("2016-02-17T12:00:00Z");
+
+        List<Tweet> inTimespan = Filter.inTimespan(Arrays.asList(), new Timespan(testStart, testEnd));
+
+        assertTrue("expected empty list", inTimespan.isEmpty());
+    }
+
+    @Test
+    public void testInTimeSpanOneTweetOneResult() { 
+        Instant testStart = Instant.parse("2016-02-17T10:00:00Z");
+        Instant testEnd = Instant.parse("2016-02-17T10:00:00Z");
+
+        List<Tweet> inTimespan = Filter.inTimespan(Arrays.asList(tweet1), new Timespan(testStart, testEnd));
+
+        assertEquals("expect to have only one element", 1, inTimespan.size());
+        assertTrue("Expect to have the element tweet1", inTimespan.contains(tweet1));
+    }
+
     
     @Test
     public void testInTimespanMultipleTweetsMultipleResults() {
@@ -74,6 +103,7 @@ public class FilterTest {
         assertTrue("expected list to contain tweets", inTimespan.containsAll(Arrays.asList(tweet1, tweet2)));
         assertEquals("expected same order", 0, inTimespan.indexOf(tweet1));
     }
+
     
     @Test
     public void testContaining() {
