@@ -19,6 +19,7 @@ Our goal is to write code that is:
 - [07: Designing Specifications](#designing-specifications)
 - [08: Mutability & Immutability](#mutability--immutability)
 - [09: Avoiding Debugging](#avoiding-debugging)
+- [10: Abstract Data Types](#abstract-data-types)
 
 ## Static Checking
 
@@ -312,3 +313,33 @@ This reading really emphasize the importance of this course, that writing code i
 
 - Limit the scope of your variables, so you narrow down the searching scope for the bug
 
+## Abstract Data Types
+
+- Hide the implementation details and only give an interface to make operations on
+
+- Operation matters, not representation
+
+- Types (whether built-in or user-defined) are classified based on their mutaibility
+
+- The operations of an abstract type are classified as follows:
+  * `Creators` create new objects of the type. A creator may take values of other types as arguments, but not an object of the type being constructed.
+  * `Producers` also create new objects of the type, but require one or more existing objects of the type as input. The `concat` method of String, for example, is a producer: it takes two strings and produces a new string representing their concatenation.
+  * `Observers`
+   take objects of the abstract type and return objects of a different type. The `size` method of `List`, for example, returns an `int`.
+  * `Mutators` change objects. The `add` method of `List`, for example, mutates a list by adding an element to the end.
+
+![alt text](images/ADTexamples.png)
+
+- Designing an abstract type involves choosing good operations and determining how they should behave. Here are a few rules of thumb:
+  * Better to have **few**, **simple** operations that can be combined in powerfull ways
+  * Each operation should have a well-defined purpose and a **coherent** behavior
+  * The set of operations should be **adequate** in the sense that there must be enough to do the kinds of computations clients are likely to want to do, test this by checking that every property of an object can be extracted
+  * Do not **mix generic and domain-specific** features
+
+- A good abstract data type should be **representation independent**. This means that the use of an abstract type is independent of its representation (the actual data structure or data fields used to implement it), so that changes in representation have no effect on code outside the abstract type itself.
+
+- The specification of an ADT includes the *name of the class*, the *Javadoc comment* just before the class, and *the specifications of its public methods and fields*. These are the contract that is visible to the client of the class.
+
+- The representation of an ADT consists of its fields and any assumptions or requirements about those fields.
+
+- The implementation of an ADT consists of the method implementations that manipulate its representation.
