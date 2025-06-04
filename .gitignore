@@ -37,3 +37,4 @@ vscode/*
 # Built Visual Studio Code Extensions
 *.vsix
 
+arr.txt

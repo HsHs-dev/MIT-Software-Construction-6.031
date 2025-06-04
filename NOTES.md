@@ -20,6 +20,7 @@ Our goal is to write code that is:
 - [08: Mutability & Immutability](#mutability--immutability)
 - [09: Avoiding Debugging](#avoiding-debugging)
 - [10: Abstract Data Types](#abstract-data-types)
+- [11: Abstraction Functions & Rep Invariants](#abstraction-functions--rep-invariants)
 
 ## Static Checking
 
@@ -343,3 +344,27 @@ This reading really emphasize the importance of this course, that writing code i
 - The representation of an ADT consists of its fields and any assumptions or requirements about those fields.
 
 - The implementation of an ADT consists of the method implementations that manipulate its representation.
+
+## Abstraction Functions & Rep Invariants
+
+- Another property, and most important, that makes a good ADT is that it **preserves its own invariants**
+
+- What is an [invariant](https://en.wikipedia.org/wiki/Invariant_(mathematics))? An invariant is a property of a program that is always true, for every possible runtime state of the program.
+
+- Avoid *representation exposure* that may broke your internal invariant, that can be achieved through **definsive copying**
+
+- **rep exposure safety argument**, this is a comment that examines each part of the rep, looks at the code that handles that part of the rep (particularly with respect to parameters and return values from clients, because that is where rep exposure occurs), and presents a reason why the code doesn’t expose the rep.
+
+- Update to what a specification may talk about:
+
+![alt text](images/adtSpec.svg)
+
+- A well designed ADT can enforce properties that we otherwise would have to state as preconditins
+
+- To make an invariant hold, we need to:
+  * make the invariant true in the initial state of the object; and
+  * ensure that all changes to the object keep the invariant true.
+
+- In terms of ADT this would be translated to:
+  * creators and producers must establish the invariant for new object instances; and
+  * mutators, observers, and producers must preserve the invariant for existing object instances.
