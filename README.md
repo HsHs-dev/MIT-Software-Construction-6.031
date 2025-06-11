@@ -27,7 +27,7 @@ I have made good, compacted notes of each reading, breaking some concepts in my 
 - [x] 08: Mutability & Immutability
 - [x] 09: Avoiding Debugging
 - [x] 10: Abstract Data Types
-- [ ] 11: Abstraction Functions & Rep Invariants
+- [x] 11: Abstraction Functions & Rep Invariants
 - [ ] 12: Interfaces, Generics, & Enums
 - [ ] 13: Debugging
 - [ ] 14: Recursion

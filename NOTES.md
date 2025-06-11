@@ -368,3 +368,8 @@ This reading really emphasize the importance of this course, that writing code i
 - In terms of ADT this would be translated to:
   * creators and producers must establish the invariant for new object instances; and
   * mutators, observers, and producers must preserve the invariant for existing object instances.
+
+- The invariant of and ADT is true if:
+  1. established by creators and producers;
+  2. preserved by mutators, observers, and producers; and
+  3. no representation exposure occurs
