@@ -21,6 +21,7 @@ Our goal is to write code that is:
 - [09: Avoiding Debugging](#avoiding-debugging)
 - [10: Abstract Data Types](#abstract-data-types)
 - [11: Abstraction Functions & Rep Invariants](#abstraction-functions--rep-invariants)
+- [12: Interfaces, Generics, & Enums](#interfaces-generics--enums)
 
 ## Static Checking
 
@@ -373,3 +374,7 @@ This reading really emphasize the importance of this course, that writing code i
   1. established by creators and producers;
   2. preserved by mutators, observers, and producers; and
   3. no representation exposure occurs
+
+## Interfaces, Generics, & Enums
+
+- Such a design elegant decision to make the spec of the interface (like `List`) weak so that the implementation decision is left for its subtypes
