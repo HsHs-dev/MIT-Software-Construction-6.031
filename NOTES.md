@@ -22,6 +22,7 @@ Our goal is to write code that is:
 - [10: Abstract Data Types](#abstract-data-types)
 - [11: Abstraction Functions & Rep Invariants](#abstraction-functions--rep-invariants)
 - [12: Interfaces, Generics, & Enums](#interfaces-generics--enums)
+- [13: 13: Debugging](#debugging)
 
 ## Static Checking
 
@@ -378,3 +379,44 @@ This reading really emphasize the importance of this course, that writing code i
 ## Interfaces, Generics, & Enums
 
 - Such a design elegant decision to make the spec of the interface (like `List`) weak so that the implementation decision is left for its subtypes
+
+## Debugging
+
+- **Systematic debugging**
+
+- (By me) The first way to solve a bug, is to not create it from the start
+
+- Make your tests small so that the new code bugs are found through regression testing
+
+- Debugging will be easier if you first work on reducing the size of the buggy input to something manageable that still exhibits the same (or very similar) bug
+
+- Find the bug using the scientific method:
+  1. **Study the data.** Look at the test input that causes the bug, and examine the incorrect results, failed assertions, and stack traces that result from it.
+
+  2. **Hypothesize.** Propose a hypothesis, consistent with all the data, about where the bug might be, or where it cannot be.  
+  
+  3. **Experiment.** Devise and run an experiment that tests your hypothesis. It’s good to make the experiment an observation at first – a probe that collects information but disturbs the system as little as possible.
+
+  4. **Repeat.** Add the data you collected from your experiment to what you knew before, and make a fresh hypothesis. Hopefully you have ruled out some possibilities and narrowed the set of possible locations and reasons for the bug.
+
+- **10-minute rule.** If you’ve spent 10 minutes hunting for a bug using ad hoc, unsystematic inspection, then it’s time to take a step back and start applying the scientific method instead.
+
+- One important form of data is the stack trace from an exception. Practice reading the stack traces that you get, because they will give you enormous amounts of information about where and what the bug might be. I wrote this to say that I used the stack trace to solve a test failure I was getting from the autograder in the course [UCB CS61B](https://github.com/HsHs-dev/UCB-CS61B) in project 1
+
+- The point where the program actually failed, by throwing an exception or producing a wrong answer, isn’t necessarily where the bug is. The buggy code may have propagated some bad values through good parts of the program before it eventually failed
+
+![alt text](images/dataflow.png)
+
+Suppose that we’re getting an unexpected exception in `countOccurrences()`. That’s the failure that we’re investigating. Then we can rule out everything *downstream* of that point as a possible location for the bug. There’s no point in looking for the bug in `findMostFrequent()`
+
+  * the bug is in `countOccurrences`: its input is valid but then it throws an exception
+
+  * the bug is in the connection between `splitIntoWords` and `countOccurrences`: both methods meet their contracts, but the postcondition guaranteed by the former doesn’t satisfy the precondition expected by the latter
+
+  * the bug is in `splitIntoWords`: its input is valid but it produces bad output
+  *  the bug is in the original input to `mostCommonWord`: text doesn’t satisfy the precondition of the whole method
+
+- Inspect chunks of the the program (*slices*) one at a time
+
+- The slice of a variable in a program include almost everything between its declaration and last mention, or its aliases
+
