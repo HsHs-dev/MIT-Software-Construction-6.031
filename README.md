@@ -29,7 +29,7 @@ I have made good, compacted notes of each reading, breaking some concepts in my 
 - [x] 10: Abstract Data Types
 - [x] 11: Abstraction Functions & Rep Invariants
 - [x] 12: Interfaces, Generics, & Enums
-- [ ] 13: Debugging
+- [x] 13: Debugging
 - [ ] 14: Recursion
 - [ ] 15: Equality
 - [ ] 16: Recursive Data Types

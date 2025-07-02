@@ -420,3 +420,22 @@ Suppose that we’re getting an unexpected exception in `countOccurrences()`. Th
 
 - The slice of a variable in a program include almost everything between its declaration and last mention, or its aliases
 
+- Compare the falling test cases to the passing ones to lacalize the bug (*delta debugging*)
+
+- if your program fails that doesn't mean that the operating system has a bug, am sorry but it's most likely that the bug is in your code..
+
+- **LEARN TO USE A DEBUGGER!**
+
+- One bug at a time:
+  * Keep a bug list
+  * Don't be distracted from the current bug
+
+- Understand the bug and fix the *real* problem
+
+- If a bug takes more than a few minutes to find, or more than a couple iterations of the study-hypothesis-experiment loop, then you need to start writing things down, because the short-term memory in your brain will very quickly lose track of what’s working and what isn’t.
+
+- Have you even initialized the object? *Check the plug*
+
+- If YOU didn’t fix it, it isn’t really fixed
+
+- **Sleep on it**. If you’re too tired, you won’t be an effective debugger. Trade latency for efficiency.
